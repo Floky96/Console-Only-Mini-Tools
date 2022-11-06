@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zahlenvergleich</title>
+</head>
+
+<body>
+    <script>
+
+        let eingabe1 = prompt("Geeben sie die erste Zahl ein");
+        let eingabe2 = prompt("Geben Sie die zweite Zahl ein");
+
+        let zahl1 = parseInt(eingabe1);
+        let zahl2 = parseInt(eingabe2);
+
+        if (zahl1 == zahl2) {
+            document.write("Beide Zahlen sind gleich Groß");
+        }
+        else if (eingabe1, eingabe2 == "") {
+            document.write("Sie haben nichts eingegeben");
+        }
+        else if (isNaN(zahl1, zahl2)) {
+            document.write("Sie haben keine Zahl eingegeben");
+        }
+        else if (zahl1 > zahl2) {
+            document.write(String(zahl1) + " ist Großer als " + String(zahl2));
+        }
+        else if (zahl1 < zahl2) {
+            document.write(String(zahl1) + " ist Kleiner als " + String(zahl2));
+        }
+
+    </script>
+
+</body>
+
+</html>

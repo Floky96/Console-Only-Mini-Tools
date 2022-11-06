@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flächenberechnung</title>
+</head>
+
+<body>
+    <script>
+
+        let type = prompt("Welche Grundform möchten Sie berechnen? \n d - für Dreieck, r - für Rechteck / Quadrat, k - für Kreis");
+
+        if (type == "d" || type == "D") {
+            let dreieckH = parseInt(prompt("Geben sie die Höhe des Dreieckes in cm ein"));
+            let dreieckL = parseInt(prompt("Geben sie die Länge des Dreieckes in cm ein"));
+            let dreieckF = dreieckH * dreieckL / 2;
+            document.write("<h1>Die fläche des Dreieckes beträgt " + String(dreieckF) + "&#13216. </h1>" );
+
+        }
+
+        else if (type == "r" || type == "R") {
+            let rechteckH = parseInt(prompt("Geben sie die Höhe des Rechteckes in cm ein"));
+            let rechteckL = parseInt(prompt("Geben sie die Länge des Rechteckes in cm ein"));
+            let rechteckF = rechteckH * rechteckL;
+            document.write("<h1>Die fläche des Rechteckes beträgt " + String(rechteckF) + "&#13216. </h1>" );
+
+        }
+
+        else if (type == "k" || type == "K") {
+            let kreisR = parseInt(prompt("Geben sie den Radius des Kreises in cm ein"));
+            let kreisF = parseInt(Math.PI * (kreisR **2))
+            document.write("<h1>Die fläche des Kreises beträgt " + String(kreisF) + "&#13216. </h1>" );
+
+        }
+
+        else if (isNaN(type)) {
+            document.write("Sie haben einen ungültigen wert eingegeben")
+        }
+
+        else {
+            document.write("Sie haben einen ungültigen wert eingegeben")
+        }
+    </script>
+
+</body>
+
+</html>

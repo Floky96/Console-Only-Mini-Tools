@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sternsäge</title>
+    <style>
+        body {
+            background-color: #202124;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+
+        /*------------ Start Input ------------*/
+
+
+        let inputWidth = parseInt(prompt("Geben sie die größe der Zähne ein:"));
+        let inputCheck1 = false;
+        do {
+            do {
+                if (inputWidth > 0 && inputWidth % 1 == 0) {
+                    inputCheck1 = true
+                }
+                else {
+                    inputCheck1 = false;
+                }
+                if (inputCheck1 == false) {
+                    alert("Sie haben einen Ungültigen Wert eingegeben");
+                    inputWidth = prompt("Geben sie die größe der Zähne ein:");
+                }
+                else {
+                    if (inputCheck1 == true) {
+                        break;
+                    }
+                }
+            } while (inputCheck1 == false);
+            document.write("<h1>Große der Zähne: " + inputWidth + "<br></h1>");
+            break;
+        } while (inputCheck1 == true);
+
+
+        let inputLength = parseInt(prompt("Geben sie die Länge des Sägeblattes ein:"));
+        let inputCheck2 = false;
+        do {
+            do {
+                if (inputLength > 0 && inputLength % 1 == 0) {
+                    inputCheck2 = true
+                }
+                else {
+                    inputCheck2 = false;
+                }
+                if (inputCheck2 == false) {
+                    alert("Sie haben einen Ungültigen Wert eingegeben");
+                    inputLength = prompt("Geben sie die Länge des Sägeblattes ein:");
+                }
+                else {
+                    if (inputCheck2 == true) {
+                        break;
+                    }
+                }
+            } while (inputCheck2 == false);
+            document.write("<h1><br>Länge des Sägeblattes: " + inputLength + "</h1><br><h2>Säge:</h2><h5>");
+            break;
+
+        } while (inputCheck2 == true);
+
+
+        /*------------ Ende Input ------------*/
+
+
+        /*------------- Start Saw ------------*/
+
+
+        let sawLength = 0;
+        do {
+
+            for (let a = 0; a < inputWidth; a++) {
+                document.write("<br>")
+                for (let i = 0; i <= a; i++) {
+                    document.write("*");
+                }
+            }
+            sawLength++
+        } while (sawLength < inputLength)
+
+
+        /*------------- Ende Saw -------------*/
+
+
+    </script>
+</body>
+
+</html>

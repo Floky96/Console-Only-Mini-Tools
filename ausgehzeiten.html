@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ausgehzeiten</title>
+</head>
+
+<body>
+    <script>
+
+        let alter = parseInt(prompt("Wie alt sind Sie?"))
+
+        if (alter < 14) {
+            document.write("<h1>Ihre Ausgehzeit is von 5 bis 23 uhr.</h1>");
+        }
+        else if (alter >= 14 && alter < 16) {
+            document.write("<h1>Ihre Ausgehzeit is von 5 bis 1 uhr.</h1>");
+        }
+        else if (alter >= 16) {
+            document.write("<h1>Ihre Ausgehzeit is unbegrenzt.</h1>");
+        }
+
+        else if (isNaN(alter)) {
+            document.write("Sie haben kein gültiges Alter eingegeben");
+        }
+        else {
+            document.write("Sie haben nichts eingegeben");
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Durch 16 Teilbar</title>
+</head>
+
+<body>
+    <script>
+
+        start = prompt("Geben Sie die erste zahl ein.")
+        ende = prompt("Geben Sie die letzte zahl ein.")
+
+        while (start <= ende) {
+
+            if (start % 16 == 0) {
+                document.write(start + "|")
+            }
+            ++start
+        }
+
+
+
+    </script>
+</body>
+
+</html>

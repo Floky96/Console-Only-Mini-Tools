@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lottozahlen Generator</title>
+</head>
+
+<body>
+    <script>
+        let list = [];
+        let listCheck = false;
+
+        /*
+        while (listCheck == false) {
+            for (let a = 0; a < 2; a++) {
+                list.push(Math.floor(Math.random() * 45 + 1))
+            }
+            if (list[0] == list[1]) {
+                listcheck = false
+            }
+            if (list.length < 7 && listCheck == true)
+                list.push(Math.floor(Math.random() * 45 + 1))
+            }
+        }
+*/
+
+
+
+        list.push(Math.floor(Math.random() * 45 + 1))
+
+        for (i = 1; i < 7; i++) {
+
+            list[i] = Math.floor(Math.random() * 45 + 1)
+
+            for (let j = 0; j < i; j++) {
+                if (list[j] == list[i]) {
+                    list[i] = Math.floor(Math.random() * 45 + 1);
+                    j = 0;
+                }
+            }
+
+        }
+        for (let a = 0; a < 7; a++) {
+            document.write(list[a] + " | ");
+        }
+
+        /*
+                if (listCheck = true) {
+                    for (let j = 0; j < 7; j++) {
+                        document.write(list[j] + " | ")
+                    }
+                }
+        
+                */
+    </script>
+</body>
+
+</html>

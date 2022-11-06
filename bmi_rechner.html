@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Rechner</title>
+</head>
+
+<body>
+    <script class="bmi">
+
+        let gewicht = prompt("Geben Sie ihr Körpergewicht in kg ein");
+        let grosse = prompt("Geben Sie ihre Körpergröße in cm ein");
+        let bmi = gewicht / ((grosse / 100) ** 2);
+        document.write("<h1>Ihr BMI beträgt " + String(bmi) + "<h1>");
+
+    </script>
+    <style>
+        h1 {
+            background-color: rgb(255, 0, 0);
+            height: fit-content;
+            width: fit-content;
+        }
+    </style>
+
+</body>
+
+</html>

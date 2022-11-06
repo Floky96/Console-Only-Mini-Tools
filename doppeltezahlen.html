@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Doppelte Zahlen</title>
+</head>
+
+<body>
+    <script>
+
+        let zahlen3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        let zahlen4 = [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35];
+
+        for (let i = 0; i < zahlen3.length; i++) {
+            for (let j = 0; j < zahlen4.length; j++) {
+                if (zahlen3[i] == zahlen4[j]) {
+                    document.write(zahlen4[j] + " ist in beiden Feldern vorhanden." + "<br>");
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mittelwert Berechnen</title>
+</head>
+
+<body>
+    <script>
+
+        let summe = 0
+        let counter = 0
+        let erg = 0
+        do{
+
+            zahl = parseInt(prompt("Geben sie eine Zahl ein: " + "Drücken Sie 0 um keine weiteren Zahlen einzugeben"));
+
+            if (zahl == 0) {
+                document.write("Sie haben die Eingabe beendet" + "<br>")
+                break;
+            }
+
+            document.write("Sie haben die Zahl " + zahl + " eingegeben" + "<br>");
+            if (zahl > 0){
+            summe = summe + zahl;
+            counter++;
+            }
+
+        }while (true);
+
+       mitt = summe / counter; 
+
+       document.write("Der Mittelwert ihrer eingaben ist: " + mitt);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

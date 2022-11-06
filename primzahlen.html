@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Primzahlen</title>
+</head>
+
+<body>
+    <script>
+
+        let userInput = prompt("Geben Sie eine Zahl für den Primzahlentest ein: ");
+        let inputcheck = false
+        let divider = 2
+        let primcheck = true
+        do {
+            if (userInput == 0) {
+                document.write("Sie haben die Eingabe beendet" + "<br>");
+                break;
+            }
+            else if (userInput % 1 == 0) {
+                inputcheck = true;
+            }
+            else {
+                alert("Sie haben einen Ungültigen Wert eingegeben");
+                userInput = prompt("Geben Sie eine Zahl für den Primzahlentest ein: ");
+            }
+        } while (inputcheck == false);
+
+        if (inputcheck == true) {
+
+            for (let i = 2; i < userInput; i++) {
+
+                if (userInput % divider == 0) {
+                    primcheck = false
+                }
+                ++divider
+            }
+            if (primcheck == true) {
+                document.write("Die zahl " + userInput + " ist eine Primzahl.<br><br>");
+            }
+            else {
+                document.write("Die zahl " + userInput + " ist keine Primzahl.<br><br>");
+            }
+
+            /*--------------------*/
+            let start = prompt("Alle Primzahlen von:")
+            let ende = prompt("Alle Primzahlen bis:")
+            document.write("Alle Primzahlen von: " + start + "<br>")
+            document.write("Alle Primzahlen bis: " + ende + "<br>")
+            for (start; start <= ende; start++) {
+                primcheck = true;
+                for (let divider = 2; divider < start; divider++) {
+
+                    if (start % divider == 0) {
+                        primcheck = false
+                    }
+                }
+                if (primcheck == true) {
+                    document.write(start + " | ");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
